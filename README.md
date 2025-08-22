@@ -6,6 +6,7 @@ Included files:
 - **Defect_Report.docx** – contains defects found  
 
 Setup
+Pre: Make sure the Ecommerce application is up and running
 1. Clone the repository
 git clone https://github.com/vbksaran/Ecommerce.git
 cd Ecommerce
