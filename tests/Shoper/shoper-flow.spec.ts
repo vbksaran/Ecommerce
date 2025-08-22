@@ -3,7 +3,7 @@ import { generateUniqueUser, waitForToast } from '../../utils/helper';
 
 test.describe('Shoper Flow', () => {
 
-  test.skip('Successful registration', async ({ registrationPage }) => {
+  test('Successful registration', async ({ registrationPage }) => {
     // const timestamp = Date.now();
     // const username = `shopper${timestamp}`;
     // const email = `shopper${timestamp}@mp.com`;
@@ -16,7 +16,7 @@ const { username, email, password } = generateUniqueUser();
     const toast = await waitForToast(registrationPage.page, 150000);
     await expect(toast).toContainText('Succesful registration');
   });
-  test.skip('unsucessfull Registration', async ({ registrationPage }) => {
+  test('unsucessfull Registration', async ({ registrationPage }) => {
     await registrationPage.goto();
     await registrationPage.registerShoper('shoper4', 'shoper4@mp.com', 'shoper4@mp.com', 'shoper4@mp.com');
     //const toast = await registrationPage.waitForToast();
@@ -36,7 +36,7 @@ const { username, email, password } = generateUniqueUser();
     await loginPage.expectGreeting('shoper3');
   });
 
-  test.skip('Add multiple products to cart', async ({ loginPage, productsPage }) => {
+  test('Add multiple products to cart', async ({ loginPage, productsPage }) => {
    
     await loginPage.goto();
     await loginPage.login(process.env.SHOPPER_EMAIL!, process.env.SHOPPER_PASSWORD!);

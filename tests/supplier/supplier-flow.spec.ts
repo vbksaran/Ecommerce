@@ -3,7 +3,7 @@ import { generateUniqueUser,waitForToast } from '../../utils/helper';
 
 test.describe('Supplier Flow', () => {
 
-  test.skip('Successful Supplier registration', async ({ registrationPage }) => {
+  test('Successful Supplier registration', async ({ registrationPage }) => {
     // const timestamp = Date.now();
     // const username = `supplier${timestamp}`;
     // const email = `supplier${timestamp}@mp.com`;
@@ -20,7 +20,7 @@ test.describe('Supplier Flow', () => {
     const toast = await waitForToast(registrationPage.page, 150000);
     await expect(toast).toContainText('Succesful registration');
   });
-  test.skip('unsucessfull Supplier Registration', async ({ registrationPage }) => {
+  test('unsucessfull Supplier Registration', async ({ registrationPage }) => {
     await registrationPage.goto();
     await registrationPage.registerSupplier('shoper4', 'shoper4@mp.com', 'shoper4@mp.com', 'shoper4@mp.com', 'supplier1', 'supplieraddress', 'description');
     //const toast = await registrationPage.waitForToast();
@@ -28,7 +28,7 @@ test.describe('Supplier Flow', () => {
     await expect(toast).toContainText('Unsuccesful registration');
 
   });
-  test.only('Successful Supplier login', async ({ loginPage }) => {
+  test('Successful Supplier login', async ({ loginPage }) => {
     await loginPage.goto();
     await loginPage.login(process.env.SUPPLIER_EMAIL!, process.env.SUPPLIER_PASSWORD!);
 
