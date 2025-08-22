@@ -3,7 +3,7 @@ E-Commerce Sample Project – E2E Tests
 This repository contains end-to-end (E2E) tests for a sample e-commerce application.
 Included files:  
 - **TestCases.xlsx** – contains the test cases  
-- **Defect_Report.docx** – contains any defects found  
+- **Defect_Report.docx** – contains defects found  
 
 Setup
 1. Clone the repository
